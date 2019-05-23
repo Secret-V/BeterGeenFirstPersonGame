@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Fighter : MonoBehaviour
 {
+    //Enum is een speciaal type dat een aantal states/waardes kan aannemen
+    //In dit geval Player1 of Player2
     public enum PlayerType
     {
         Player1,
         Player2
     }
 
+    //Het enum type gebruik je hetzelfde als andere variabelen
     public PlayerType player;
 
     public float jumpForce = 10.0f;
@@ -23,7 +26,7 @@ public class Fighter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player == PlayerType.Player1)
+        if(player == PlayerType.Player1)//Controleer de waarde van de enum
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {

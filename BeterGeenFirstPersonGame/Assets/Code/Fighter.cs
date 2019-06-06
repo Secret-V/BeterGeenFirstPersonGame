@@ -21,6 +21,11 @@ public class Fighter : MonoBehaviour
     void Start()
     {
         StartCoroutine(WaitToStart());
+
+        //Spreek de GameManager aan via de 'instance' van het object
+        GameManager.Instance.score += 1;
+
+        print(GameManager.Instance.score);
     }
 
     // Update is called once per frame
